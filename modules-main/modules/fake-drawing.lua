@@ -1,3 +1,6 @@
+ local omen_vip = {
+        loaded = false;
+    }
 if not omen_vip then
     local omen_vip = {
         loaded = false;
@@ -9,11 +12,11 @@ if not omen_vip then
         game.Loaded:Wait()
     end
 
-function omen_vip.http_get(path)
-				return game:HttpGet(
-					"https://raw.githubusercontent.com/defnotalibuserwowow/omen_v3/main/modules-main/" .. path
-				)
-			end
+    function omen_vip.http_get(path)
+        return game:HttpGet(
+            "https://raw.githubusercontent.com/defnotalibuserwowow/omen_v3/main/modules-main/" .. path
+        )
+    end
 end
 
 -- services
