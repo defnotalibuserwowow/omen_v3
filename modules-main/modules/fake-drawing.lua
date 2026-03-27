@@ -1,16 +1,16 @@
-if not twinkhook then
-    local twinkhook = {
+if not omen_vip then
+    local omen_vip = {
         loaded = false;
     }
 
-    getgenv().twinkhook = twinkhook
+    getgenv().omen_vip = omen_vip
 
     if not game:IsLoaded() then
         game.Loaded:Wait()
     end
 
-function twinkhook.http_get(path)
-    return game:HttpGet('https://github.com/ipufo1/twinkhook/blob/main/'..path);
+function omen_vip.http_get(path)
+    return game:HttpGet('https://github.com/ipufo1/omen_vip/blob/main/'..path);
 end;
 end
 
@@ -52,14 +52,14 @@ local baseDrawingObj = setmetatable({
     end
 });
 
-local Fonts = loadstring(twinkhook.http_get('modules/fonts.lua?raw=true'))('twinkhook');
+local Fonts = loadstring(omen_vip.http_get('modules/fonts.lua?raw=true'))('omen_vip');
 
 local drawingFontsEnum = {
-    [0] = Fonts.Append('tahoma-xp', twinkhook.http_get('fonts/TahomaXP.txt?raw=true')),
-    [1] = Fonts.Append('proggy-c', twinkhook.http_get('fonts/ProggyClean.txt?raw=true')),
-    [2] = Fonts.Append('proggy-t', twinkhook.http_get('fonts/ProggyTiny.txt?raw=true')),
-    [3] = Fonts.Append('pixel-7', twinkhook.http_get('fonts/Pixel.txt?raw=true')),
-    [4] = Fonts.Append('minecraftia', twinkhook.http_get('fonts/Minecraftia.txt?raw=true')),
+    [0] = Fonts.Append('tahoma-xp', omen_vip.http_get('fonts/TahomaXP.txt?raw=true')),
+    [1] = Fonts.Append('proggy-c', omen_vip.http_get('fonts/ProggyClean.txt?raw=true')),
+    [2] = Fonts.Append('proggy-t', omen_vip.http_get('fonts/ProggyTiny.txt?raw=true')),
+    [3] = Fonts.Append('pixel-7', omen_vip.http_get('fonts/Pixel.txt?raw=true')),
+    [4] = Fonts.Append('minecraftia', omen_vip.http_get('fonts/Minecraftia.txt?raw=true')),
 }
 
 -- function
