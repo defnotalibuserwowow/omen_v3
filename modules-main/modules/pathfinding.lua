@@ -1,4 +1,3 @@
--- ipufo is the best
 local round = math.round;
 local len = rawlen;
 
@@ -221,7 +220,6 @@ do
     return Pathfinding;
 end;
 
--- lazily made
 local character = game.Players.LocalPlayer.Character;
 game.Players.LocalPlayer:GetMouse().Button1Down:Connect(function()
     local start = character.HumanoidRootPart.Position;
