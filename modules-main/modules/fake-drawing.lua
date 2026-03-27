@@ -10,7 +10,7 @@ if not omen_vip then
     end
 
 function omen_vip.http_get(path)
-    return game:HttpGet('https://github.com/defnotalibuserwowow/omen_v3/tree/65e2017050adf05105a93061fb968edf1c4e6604/modules-main/'..path);
+    return game:HttpGet('https://github.com/defnotalibuserwowow/omen_v3/raw/main/modules-main/'..path);
 end;
 end
 
@@ -52,7 +52,7 @@ local baseDrawingObj = setmetatable({
     end
 });
 
-local Fonts = loadstring(omen_vip.http_get('modules/fonts.lua?raw=true'))('omen_vip');
+local Fonts = loadstring(omen_vip.http_get('modules/fonts.lua?raw=true'))('Omen');
 
 local drawingFontsEnum = {
     [0] = Fonts.Append('tahoma-xp', omen_vip.http_get('fonts/TahomaXP.txt?raw=true')),
