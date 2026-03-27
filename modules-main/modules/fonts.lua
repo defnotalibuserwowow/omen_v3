@@ -3,6 +3,7 @@ local foldername = ...;
 local HttpService = cloneref(game:GetService('HttpService'));
 local Fonts = {
     _registry = {};
+    Append = nil
 };
 
 if not isfolder(foldername.. '/Fonts') then
@@ -22,7 +23,6 @@ end;
 if not isfolder(foldername.. '/Fonts') then
     makefolder(foldername.. '/Fonts');
 end;
-
 function Fonts.Append(Name, Data, ENCODED)
     local Path = foldername.. `/fonts/{Name}`;
 
