@@ -5,8 +5,8 @@ local Fonts = {
     _registry = {};
 };
 
-if not isfolder(foldername.. '/fonts') then
-    makefolder(foldername.. '/fonts');
+if not isfolder(foldername.. '/Fonts') then
+    makefolder(foldername.. '/Fonts');
 end;
 
 local _, ver = identifyexecutor();
@@ -15,12 +15,12 @@ if not isfile(foldername.. '/version.txt') then
 end;
 
 if readfile(foldername.. '/version.txt') ~= ver then
-    delfolder(foldername.. '/fonts');
+    delfolder(foldername.. '/Fonts');
     delfile(foldername.. '/version.txt'); writefile(foldername.. '/version.txt', ver);
 end;
 
-if not isfolder(foldername.. '/fonts') then
-    makefolder(foldername.. '/fonts');
+if not isfolder(foldername.. '/Fonts') then
+    makefolder(foldername.. '/Fonts');
 end;
 
 function Fonts.Append(Name, Data, ENCODED)
