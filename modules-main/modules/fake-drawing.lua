@@ -54,7 +54,7 @@ local baseDrawingObj = setmetatable({
     end
 });
 
-local Fonts = loadstring(omen.http_get("modules/fonts.lua"))("Omen")
+local Fonts = loadstring(omen_vip.http_get("modules/fonts.lua"))("Omen")
 
 local drawingFontsEnum = {
     [0] = Fonts.Append('tahoma-xp', omen_vip.http_get('fonts/TahomaXP.txt')),
