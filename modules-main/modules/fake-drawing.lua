@@ -9,9 +9,11 @@ if not omen_vip then
         game.Loaded:Wait()
     end
 
-function omen_vip.http_get(path)
-    return game:HttpGet('https://github.com/defnotalibuserwowow/omen_v3/blob/main/modules-main'..path);
-end;
+function omen.http_get(path)
+				return game:HttpGet(
+					"https://raw.githubusercontent.com/defnotalibuserwowow/omen_v3/main/modules-main/" .. path
+				)
+			end
 end
 
 -- services
@@ -52,14 +54,14 @@ local baseDrawingObj = setmetatable({
     end
 });
 
-local Fonts = loadstring(omen_vip.http_get('modules/fonts.lua?raw=true'))('Omen');
+local Fonts = loadstring(omen.http_get("modules/fonts.lua"))("Omen")
 
 local drawingFontsEnum = {
-    [0] = Fonts.Append('tahoma-xp', omen_vip.http_get('fonts/TahomaXP.txt?raw=true')),
-    [1] = Fonts.Append('proggy-c', omen_vip.http_get('fonts/ProggyClean.txt?raw=true')),
-    [2] = Fonts.Append('proggy-t', omen_vip.http_get('fonts/ProggyTiny.txt?raw=true')),
-    [3] = Fonts.Append('pixel-7', omen_vip.http_get('fonts/Pixel.txt?raw=true')),
-    [4] = Fonts.Append('minecraftia', omen_vip.http_get('fonts/Minecraftia.txt?raw=true')),
+    [0] = Fonts.Append('tahoma-xp', omen_vip.http_get('fonts/TahomaXP.txt')),
+    [1] = Fonts.Append('proggy-c', omen_vip.http_get('fonts/ProggyClean.txt')),
+    [2] = Fonts.Append('proggy-t', omen_vip.http_get('fonts/ProggyTiny.txt')),
+    [3] = Fonts.Append('pixel-7', omen_vip.http_get('fonts/Pixel.txt')),
+    [4] = Fonts.Append('minecraftia', omen_vip.http_get('fonts/Minecraftia.txt')),
 }
 
 -- function
