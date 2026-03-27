@@ -9,7 +9,7 @@ if not omen_vip then
         game.Loaded:Wait()
     end
 
-function omen.http_get(path)
+function omen_vip.http_get(path)
 				return game:HttpGet(
 					"https://raw.githubusercontent.com/defnotalibuserwowow/omen_v3/main/modules-main/" .. path
 				)
