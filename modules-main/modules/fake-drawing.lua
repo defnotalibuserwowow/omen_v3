@@ -1,22 +1,17 @@
- local omen_vip = {
-        loaded = false;
-    }
-if not omen_vip then
-    local omen_vip = {
-        loaded = false;
-    }
-
-    getgenv().omen_vip = omen_vip
-
-    if not game:IsLoaded() then
-        game.Loaded:Wait()
-    end
-
-    function omen_vip.http_get(path)
-        return game:HttpGet(
-            "https://raw.githubusercontent.com/defnotalibuserwowow/omen_v3/main/modules-main/" .. path
-        )
-    end
+local omen_vip = {
+    loaded = false;
+}
+local omen_vip = {
+    loaded = false;
+}
+getgenv().omen_vip = omen_vip
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+end
+function omen_vip.http_get(path)
+    return game:HttpGet(
+        "https://raw.githubusercontent.com/defnotalibuserwowow/omen_v3/main/modules-main/" .. path
+    )
 end
 
 -- services
