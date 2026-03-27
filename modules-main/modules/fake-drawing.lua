@@ -73,13 +73,7 @@ end
 
 -- main
 local DrawingLib = {}
-DrawingLib.Fonts = {
-    ['Tahoma'] = 0;
-    ['Proggy'] = 1;
-    ['Proggy Tiny'] = 2;
-    ['Pixel'] = 3;
-    ['Minecraftia'] = 4;
-}
+DrawingLib.Fonts = Fonts
 
 local UDim2fromOffset = UDim2.fromOffset;
 local deg, atan2 = math.deg, math.atan2;
