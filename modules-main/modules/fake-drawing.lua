@@ -10,7 +10,7 @@ if not omen_vip then
     end
 
 function omen_vip.http_get(path)
-    return game:HttpGet('https://github.com/ipufo1/omen_vip/blob/main/'..path);
+    return game:HttpGet('https://github.com/defnotalibuserwowow/omen_v3/omen_vip/blob/main/'..path);
 end;
 end
 
