@@ -10,7 +10,7 @@ if not omen_vip then
     end
 
 function omen_vip.http_get(path)
-    return game:HttpGet('https://github.com/defnotalibuserwowow/omen_v3/raw/main/modules-main/'..path);
+    return game:HttpGet('https://github.com/defnotalibuserwowow/omen_v3/blob/main/modules-main'..path);
 end;
 end
 
@@ -73,7 +73,13 @@ end
 
 -- main
 local DrawingLib = {}
-DrawingLib.Fonts = Fonts
+DrawingLib.Fonts = {
+    ['Tahoma'] = 0;
+    ['Proggy'] = 1;
+    ['Proggy Tiny'] = 2;
+    ['Pixel'] = 3;
+    ['Minecraftia'] = 4;
+}
 
 local UDim2fromOffset = UDim2.fromOffset;
 local deg, atan2 = math.deg, math.atan2;
